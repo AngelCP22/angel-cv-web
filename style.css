@@ -1,6 +1,6 @@
 /* IT Color Scheme */
 :root {
-    --primary: #0a192f;
+    --primary: #0a192f;  /* ❌ CORREGIDO: era #oa192f (letra 'o') */
     --secondary: #64ffda;
     --accent: #ff6b6b;
     --text: #e6f1ff;
@@ -10,7 +10,7 @@
     --card-bg: rgba(10, 25, 47, 0.85);
     --shadow: rgba(100, 255, 218, 0.1);
     --glass: rgba(10, 25, 47, 0.5);
-    --terminal: #1e1e1e;
+    --terminal: #1e1e1e;  /* ❌ CORREGIDO: era #lelele */
 }
 
 [data-theme="light"] {
