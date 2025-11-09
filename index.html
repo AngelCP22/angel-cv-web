@@ -2,71 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Angel Cuchillo - Especialista en Infraestructura de Redes Cisco, Python, Soporte TI">
-    <title>Angel Cuchillo | Especialista TI & Redes</title>
+    <title>Angel Cuchillo | Tech Specialist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Animation -->
-    <div class="bg-animation">
-        <div class="tech-grid"></div>
-    </div>
+    <!-- Background -->
+    <div class="bg-animation"><div class="tech-grid"></div></div>
 
     <!-- Header -->
     <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="profile-wrapper">
-                    <img src="https://i.imgur.com/8J3p8vQ.jpg" alt="Angel Cuchillo" class="profile-img">
-                    <div class="profile-glow"></div>
-                </div>
-                <div class="hero-text">
-                    <h1>Angel Eduardo Cuchillo</h1>
-                    <div class="typewriter">
-                        <p class="tagline">Especialista en Infraestructura de Redes</p>
-                    </div>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Años Exp</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Certificaciones</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">200+</span>
-                            <span class="stat-label">Tickets Resueltos</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Contact Bar MOBILE (ahora es parte del flujo normal) -->
-            <div class="contact-bar-mobile">
-                <a href="mailto:angelcperez17@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="tel:+51924449893" class="contact-link">
-                    <i class="fas fa-phone"></i> Llamar
-                </a>
-                <a href="https://wa.me/51924449893" class="contact-link" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+        <div class="profile-wrapper">
+            <img src="https://i.imgur.com/8J3p8vQ.jpg" alt="Angel Cuchillo" class="profile-img">
+            <div class="profile-glow"></div>
+        </div>
+        <div class="hero-text">
+            <h1>Angel Eduardo Cuchillo</h1>
+            <p class="tagline">Especialista en Infraestructura de Redes</p>
+            <div class="stats">
+                <div class="stat-item"><span class="stat-number">4+</span><span class="stat-label">Años</span></div>
+                <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Certs</span></div>
+                <div class="stat-item"><span class="stat-number">200+</span><span class="stat-label">Tickets</span></div>
             </div>
         </div>
     </header>
 
-    <!-- Floating Contact (solo desktop) -->
+    <!-- Contact Mobile (siempre visible) -->
+    <div class="contact-mobile">
+        <a href="mailto:angelcperez17@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="tel:+51924449893" class="contact-btn"><i class="fas fa-phone"></i> Llamar</a>
+        <a href="https://wa.me/51924449893" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <!-- Desktop Contact (flotante) -->
     <div class="floating-contact">
-        <a href="mailto:angelcperez17@gmail.com" class="float-btn" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="tel:+51924449893" class="float-btn" aria-label="Llamar">
-            <i class="fas fa-phone"></i>
-        </a>
+        <a href="mailto:angelcperez17@gmail.com" class="float-btn" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+51924449893" class="float-btn" title="Llamar"><i class="fas fa-phone"></i></a>
     </div>
 
     <!-- Main -->
@@ -78,18 +52,9 @@
                 <p class="perfil-text">
                     Profesional de TI con <strong>4 años de experiencia en infraestructura de redes</strong>, administración de sistemas y soporte técnico corporativo. Especializado en configuración de <strong>switches Cisco, VLANs, WLAN y WLC</strong>.
                 </p>
-                <p class="perfil-text">
-                    Certificado en <strong>Python, Ciberseguridad y Hacking Ético</strong>. Conocimientos en <strong>ITIL, Active Directory, Windows Server</strong>. Capacidad para trabajar bajo presión, gestionar incidentes y optimizar procesos TI.
-                </p>
                 <div class="tech-stack">
-                    <span class="tech-tag">Cisco IOS</span>
-                    <span class="tech-tag">VLAN/WLAN</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Cybersecurity</span>
-                    <span class="tech-tag">ITIL</span>
-                    <span class="tech-tag">Active Directory</span>
-                    <span class="tech-tag">TCP/IP</span>
-                    <span class="tech-tag">SLA Management</span>
+                    <span class="tech-tag">Cisco IOS</span><span class="tech-tag">Python</span><span class="tech-tag">Cybersecurity</span>
+                    <span class="tech-tag">ITIL</span><span class="tech-tag">Active Directory</span><span class="tech-tag">TCP/IP</span>
                 </div>
             </div>
         </section>
@@ -101,78 +66,20 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3>ONSITE RANSA</h3>
-                                    <p class="job-title">Especialista en Infraestructura de Redes</p>
-                                </div>
-                                <span class="job-date">2024-2025</span>
-                            </div>
-                            <ul>
-                                <li>Administración de <strong>VLANs, switches Cisco</strong> y <strong>Wireless LAN Controllers</strong></li>
-                                <li>Monitoreo proactivo de <strong>LAN/WAN</strong> garantizando 99.9% uptime</li>
-                                <li>Gestión de tickets <strong>Nivel 2</strong> en Corabsys/AppSheet</li>
-                                <li>Documentación técnica y mejora continua</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span><i class="fas fa-network-wired"></i> Cisco IOS</span>
-                                <span><i class="fas fa-wifi"></i> WLAN/WLC</span>
-                                <span><i class="fas fa-ticket-alt"></i> Ticketing</span>
-                                <span><i class="fas fa-shield-alt"></i> Network Security</span>
-                            </div>
+                        <div class="job-header">
+                            <h3>ONSITE RANSA</h3>
+                            <p class="job-title">Especialista en Infraestructura de Redes</p>
+                            <span class="job-date">2024-2025</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3>SLA - Logistics & IT</h3>
-                                    <p class="job-title">Asistente de Sistemas TI</p>
-                                </div>
-                                <span class="job-date">2023-2024</span>
-                            </div>
-                            <ul>
-                                <li>Gestión de proyectos de TI e inventarios tecnológicos</li>
-                                <li>Soporte <strong>Nivel 1 y 2</strong> con ITIL-based processes</li>
-                                <li>Administración de <strong>Active Directory</strong> y usuarios</li>
-                                <li>Optimización de procesos logísticos</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span><i class="fas fa-users-cog"></i> Active Directory</span>
-                                <span><i class="fas fa-clipboard-check"></i> ITIL</span>
-                                <span><i class="fas fa-list-alt"></i> Asset Management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3>TeslaByte Perú</h3>
-                                    <p class="job-title">Técnico de Soporte TI</p>
-                                </div>
-                                <span class="job-date">2021-2022</span>
-                            </div>
-                            <ul>
-                                <li>Soporte técnico <strong>Nivel 1 y 2</strong> para 100+ equipos</li>
-                                <li>Diagnóstico y resolución de hardware/software</li>
-                                <li>Configuración de equipos y mantenimiento</li>
-                                <li>Documentación técnica y knowledge base</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span><i class="fas fa-tools"></i> Troubleshooting</span>
-                                <span><i class="fas fa-desktop"></i> Hardware</span>
-                                <span><i class="fas fa-book"></i> KB Management</span>
-                            </div>
+                        <ul>
+                            <li>Administración de VLANs, switches Cisco y WLC</li>
+                            <li>Monitoreo LAN/WAN con 99.9% uptime</li>
+                            <li>Gestión de tickets Nivel 2 en Corabsys/AppSheet</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span><i class="fas fa-network-wired"></i> Cisco</span>
+                            <span><i class="fas fa-wifi"></i> WLAN</span>
+                            <span><i class="fas fa-shield-alt"></i> Security</span>
                         </div>
                     </div>
                 </div>
@@ -185,37 +92,24 @@
             <div class="skills-dashboard">
                 <div class="skill-category">
                     <h4><i class="fas fa-network-wired"></i> Redes & Infraestructura</h4>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <span>Cisco IOS / VLANs / Trunking</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Wireless LAN Controller (WLC)</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>TCP/IP, DHCP, DNS, SNMP</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
+                    <div class="skill-item">
+                        <span>Cisco IOS / VLANs</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Wireless LAN Controller</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
                     </div>
                 </div>
-
                 <div class="skill-category">
-                    <h4><i class="fas fa-server"></i> Sistemas Operativos</h4>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <span>Windows Server 2016/2019</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Linux (Ubuntu, CentOS)</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Active Directory & GPO</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                        </div>
+                    <h4><i class="fas fa-server"></i> Sistemas</h4>
+                    <div class="skill-item">
+                        <span>Windows Server / Linux</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Active Directory</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
                     </div>
                 </div>
             </div>
@@ -237,38 +131,28 @@
                     <p>INCEPERU</p>
                     <span class="cert-date">2025</span>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-user-secret"></i></div>
-                    <h4>Hacking Ético</h4>
-                    <p>Fundación San Marcos</p>
-                    <span class="cert-date">2025</span>
-                </div>
             </div>
         </section>
 
         <!-- Contacto -->
         <section class="section contact-section">
             <h2><i class="fas fa-paper-plane"></i> Conectemos</h2>
-            <p>¿Buscas un profesional TI proactivo? ¡Hablemos!</p>
+            <p>¿Buscas un profesional TI proactivo?</p>
             <div class="contact-buttons">
-                <a href="mailto:angelcperez17@gmail.com" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Enviar Email
-                </a>
-                <a href="tel:+51924449893" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> Llamar Ahora
-                </a>
+                <a href="mailto:angelcperez17@gmail.com" class="btn btn-primary">Enviar Email</a>
+                <a href="tel:+51924449893" class="btn btn-secondary">Llamar Ahora</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Angel Cuchillo | CV Tech v3.0 | 100% Responsivo</p>
+            <p>&copy; 2025 Angel Cuchillo | CV Tech v4.0 | 100% Responsivo</p>
         </div>
     </footer>
 
     <script>
-        // Animación de entrada suave
+        // Animaciones suaves
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -276,27 +160,25 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.section').forEach(section => {
             section.style.opacity = '0';
-            section.style.transform = 'translateY(40px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
         });
 
-        // Efecto typewriter
+        // Typewriter
         const typewriterText = document.querySelector('.typewriter p');
         if (typewriterText) {
             const text = typewriterText.textContent;
             typewriterText.textContent = '';
-            let charIndex = 0;
-            const typeInterval = setInterval(() => {
-                if (charIndex < text.length) {
-                    typewriterText.textContent += text.charAt(charIndex);
-                    charIndex++;
-                } else {
-                    clearInterval(typeInterval);
+            let i = 0;
+            setInterval(() => {
+                if (i < text.length) {
+                    typewriterText.textContent += text.charAt(i);
+                    i++;
                 }
             }, 60);
         }
