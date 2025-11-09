@@ -378,4 +378,209 @@ body {
     background: var(--glass);
     padding: 20px; /* MOBILE */
     border-radius: 12px;
-    text-align
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--primary);
+}
+
+.cert-icon {
+    font-size: 2.5rem; /* MOBILE */
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.cert-card h4 {
+    font-size: 1rem; /* MOBILE */
+}
+
+.cert-date {
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+/* 12. CONTACTO */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 30px; /* MOBILE */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: var(--accent); color: white; }
+
+/* 13. FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-muted);
+    font-size: 0.8rem; /* MOBILE */
+}
+
+/* ============================================
+   BREAKPOINTS - TABLET (768px+)
+============================================ */
+@media (min-width: 768px) {
+    html { font-size: 18px; }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .typewriter p {
+        font-size: 1.2rem;
+    }
+
+    .stats {
+        justify-content: flex-start;
+    }
+
+    .contact-mobile {
+        display: none; /* Oculto en tablet+ */
+    }
+
+    .floating-contact {
+        display: flex; /* MOSTRAR */
+        position: fixed;
+        bottom: 30px; right: 30px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .float-btn {
+        width: 50px; height: 50px;
+        border-radius: 50%;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .section {
+        padding: 40px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        padding-left: 35px;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-marker {
+        left: -28px;
+    }
+
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    .contact-buttons {
+        flex-direction: row;
+    }
+
+    .btn {
+        width: auto;
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   BREAKPOINTS - DESKTOP (1024px+)
+============================================ */
+@media (min-width: 1024px) {
+    html { font-size: 20px; }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .profile-img {
+        width: 160px; height: 160px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .section {
+        margin: 80px 0;
+        padding: 50px;
+    }
+
+    .timeline {
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -33px;
+        width: 18px; height: 18px;
+    }
+
+    .certs-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+
+    .skills-dashboard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* 14. PREVENT OVERFLOW */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 15. PERFORMANCE */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+    .bg-animation { display: none; }
+}
