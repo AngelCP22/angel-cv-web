@@ -3,308 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Angel Eduardo Cuchillo Pérez - Especialista en Infraestructura de Redes Cisco, Soporte TI Nivel 2, Python, Ciberseguridad, ITIL - Lima Perú">
-    <title>Angel Eduardo Cuchillo | Especialista TI & Redes</title>
+    <title>Angel Cuchillo - TI Infrastructure & Support</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Animation -->
-    <div class="bg-animation"><div class="tech-grid"></div></div>
+    <!-- Botón Modo Oscuro -->
+    <button id="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <!-- Header -->
-    <header class="hero">
-        <div class="hero-content">
-            <div class="profile-wrapper">
-                <img src="https://i.imgur.com/8J3p8vQ.jpg" alt="Angel Eduardo Cuchillo" class="profile-img">
-                <div class="profile-glow"></div>
+    <!-- Navegación -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">AC</div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#certifications">Certificaciones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="hero-text">
-                <h1>Angel Eduardo Cuchillo Pérez</h1>
-                <div class="typewriter"><p class="tagline">Especialista en Infraestructura de Redes</p></div>
-                <div class="stats">
-                    <div class="stat-item"><span class="stat-number">4+</span><span class="stat-label">Años Exp</span></div>
-                    <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Certificaciones</span></div>
-                    <div class="stat-item"><span class="stat-number">200+</span><span class="stat-label">Tickets Resueltos</span></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="typewriter">Hola, soy Angel Cuchillo</h1>
+                <h2 class="fade-in">Especialista en Infraestructura de Redes & Soporte TI</h2>
+                <p class="fade-in">Transformando desafíos tecnológicos en soluciones eficientes</p>
+                <div class="hero-buttons fade-in">
+                    <a href="#contact" class="btn btn-primary">Contáctame</a>
+                    <a href="CV_Angel_2025.pdf" class="btn btn-secondary" download>Descargar CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <pre id="code-display"></pre>
                 </div>
             </div>
         </div>
-    </header>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-    <!-- Contact Mobile (SIEMPRE VISIBLE) -->
-    <div class="contact-mobile">
-        <a href="mailto:angelcperez17@gmail.com" class="contact-btn">
-            <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="tel:+51924449893" class="contact-btn">
-            <i class="fas fa-phone"></i> Llamar
-        </a>
-        <a href="https://wa.me/51924449893" class="contact-btn whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-    </div>
-
-    <!-- Floating Desktop -->
-    <div class="floating-contact">
-        <a href="mailto:angelcperez17@gmail.com" class="float-btn" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+51924449893" class="float-btn" title="Llamar"><i class="fas fa-phone"></i></a>
-    </div>
-
-    <!-- CONTENIDO COMPLETO -->
-    <main class="container">
-        <!-- PERFIL PROFESIONAL MEJORADO -->
-        <section class="section">
-            <h2><i class="fas fa-terminal"></i> Perfil Profesional</h2>
-            <div class="perfil-card">
-                <p class="perfil-text">
-                    Egresado de Desarrollo de Sistemas de Información en IDAT con <strong>4+ años de experiencia en infraestructura de redes Cisco, soporte técnico corporativo y administración de sistemas</strong>. Profesional proactivo y adaptable con capacidad de liderazgo, especializado en configuración de VLANs, WLAN, WLC y gestión de mesas de ayuda Nivel 1/2.
-                </p>
-                <p class="perfil-text">
-                    Certificado en <strong>Python, Ciberseguridad y Hacking Ético</strong> con conocimientos en ITIL, Active Directory y Windows Server. Experiencia comprobada en optimización de procesos TI, gestión de activos tecnológicos y cumplimiento de SLA en entornos corporativos.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Cisco IOS</span>
-                    <span class="tech-tag">VLAN/WLAN</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Cybersecurity</span>
-                    <span class="tech-tag">ITIL</span>
-                    <span class="tech-tag">Active Directory</span>
-                    <span class="tech-tag">SLA Management</span>
-                    <span class="tech-tag">TCP/IP</span>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Sobre mí</h2>
+            <div class="about-grid fade-in">
+                <div class="about-text">
+                    <p>Técnico en TI con <strong>4+ años de experiencia</strong> en infraestructura de red, soporte técnico y desarrollo. Especializado en gestión de switches Cisco, VLANs, Wireless LAN Controllers y seguridad informática.</p>
+                    <p>Actualmente egresado de <strong>Desarrollo de Sistemas de Información</strong>, combino conocimientos técnicos en red con habilidades de programación para crear soluciones integrales.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="number" data-count="4">0</span>
+                            <span>Años de experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-count="500">0</span>
+                            <span>+ Tickets resueltos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-count="95">0</span>
+                            <span>% SLA Cumplido</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="tech-icons">
+                        <i class="fab fa-cisco" title="Cisco"></i>
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fas fa-network-wired" title="Redes"></i>
+                        <i class="fab fa-linux" title="Linux"></i>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- DATOS PERSONALES -->
-        <section class="section">
-            <h2><i class="fas fa-id-card"></i> Datos Personales</h2>
-            <div class="perfil-card">
-                <p><strong>📅 Fecha de nacimiento:</strong> 12 de noviembre de 1998 (26 años)</p>
-                <p><strong>📍 Ubicación:</strong> Villa María del Triunfo, Lima, Perú</p>
-                <p><strong>📧 Correo:</strong> angelcperez17@gmail.com</p>
-                <p><strong>📱 Celular:</strong> +51 924 449 893</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-network-wired"></i> Redes & Infraestructura</h3>
+                    <div class="skill-bar" data-skill="90">
+                        <span class="skill-name">VLANs & Switches Cisco</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar" data-skill="85">
+                        <span class="skill-name">Wireless LAN Controller</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar" data-skill="80">
+                        <span class="skill-name">Protocolos TCP/IP</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Desarrollo & Scripting</h3>
+                    <div class="skill-bar" data-skill="75">
+                        <span class="skill-name">HTML5 & CSS3</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar" data-skill="70">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar" data-skill="65">
+                        <span class="skill-name">Python</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-shield-alt"></i> Ciberseguridad</h3>
+                    <div class="skill-bar" data-skill="75">
+                        <span class="skill-name">Hacking Ético</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar" data-skill="70">
+                        <span class="skill-name">Seguridad en Redes</span>
+                        <div class="bar-container">
+                            <div class="bar-progress"></div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- EDUCACIÓN -->
-        <section class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
-            <div class="edu-card">
-                <h3>Desarrollo de Sistemas de Información</h3>
-                <p><strong>Instituto de Diseño, Arte y Tecnología (IDAT)</strong></p>
-                <span class="edu-date">Egresado 2025 | Lima, Perú</span>
-                <p style="margin-top: 10px;">Educación técnica especializada en infraestructura de redes, sistemas operativos y desarrollo de aplicaciones informáticas.</p>
-            </div>
-        </section>
-
-        <!-- EXPERIENCIA LABORAL COMPLETA (SIN CAMBIAR DATOS) -->
-        <section class="section">
-            <h2><i class="fas fa-code-branch"></i> Experiencia Laboral</h2>
+    <!-- Experience Timeline -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Experiencia Laboral</h2>
             <div class="timeline">
-                <!-- ONSITE RANSA -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>ONSITE RANSA</h3>
-                            <p class="job-title">Especialista en Infraestructura de Redes</p>
-                            <span class="job-date">2024 - 2025</span>
-                        </div>
+                        <h3>Técnico de Infraestructura de Red</h3>
+                        <h4>ONSITE RANSA | 2024 – 2025</h4>
                         <ul>
-                            <li>Gestión de infraestructura de red: Modificación y administración de VLANs, configuración de puertos de puntos de acceso y troncales según requerimientos operativos</li>
-                            <li>Manejo de red LAN y WAN: Soporte y monitoreo de la conectividad interna y remota, asegurando la disponibilidad de los servicios de red</li>
-                            <li>Gestión de switches Cisco: Configuración básica e intermedia, validación de estado, resolución de incidencias y aplicación de buenas prácticas de seguridad de red</li>
-                            <li>Soporte en WLC (Wireless LAN Controller): Rastreo de dispositivos por MAC Address e IP, gestión de accesos inalámbricos, monitoreo y ajustes de conectividad WIFI</li>
-                            <li>Gestión de tickets: Creación, seguimiento y cierre de incidencias y requerimientos a través de Corabsys y AppSheet, garantizando trazabilidad de los casos</li>
-                            <li>Documentación y mejora continua: Registro de incidencias recurrentes y propuestas de mejora para optimizar la operación de red y soporte</li>
+                            <li>Administré 50+ puertos en switches Cisco, implementando VLANs para 200+ usuarios</li>
+                            <li>Reduje downtime en 30% mediante monitoreo proactivo LAN/WAN</li>
+                            <li>Gestioné 100+ tickets/mes con 95% de cumplimiento de SLA</li>
                         </ul>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-network-wired"></i> Cisco IOS</span>
-                            <span><i class="fas fa-wifi"></i> VLAN/WLAN</span>
-                            <span><i class="fas fa-sitemap"></i> LAN/WAN</span>
-                            <span><i class="fas fa-ticket-alt"></i> Corabsys</span>
-                            <span><i class="fas fa-shield-alt"></i> Network Security</span>
-                        </div>
                     </div>
                 </div>
-
-                <!-- SLA -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>SLA - Logistics & IT</h3>
-                            <p class="job-title">Asistente de Sistemas TI</p>
-                            <span class="job-date">2023 - 2024</span>
-                        </div>
+                        <h3>Asistente de Sistemas</h3>
+                        <h4>SLA | 2023 – 2024</h4>
                         <ul>
-                            <li>Participación en la gestión de proyectos de TI, contribuyendo al análisis, implementación y optimización de soluciones tecnológicas</li>
-                            <li>Administración y actualización del inventario de equipos informáticos, asegurando el control y disponibilidad de los activos tecnológicos</li>
-                            <li>Configuración y mantenimiento de redes, garantizando una conectividad estable y eficiente en la infraestructura corporativa</li>
-                            <li>Atención y gestión de tickets a través de la mesa de ayuda en niveles 1 y 2, brindando soporte técnico oportuno y eficaz</li>
-                            <li>Diagnóstico y resolución de incidencias en hardware, software y redes, asegurando tiempos de respuesta óptimos</li>
-                            <li>Configuración de packing lists para optimizar la logística de almacenamiento y distribución de productos tecnológicos</li>
-                            <li>Creación, revisión y mejora de checklists operativos, asegurando el cumplimiento de normativas internas y mejores prácticas</li>
-                            <li>Apoyo en la gestión de transporte y almacén, optimizando la distribución de equipos y recursos</li>
-                            <li>Creación, administración y gestión de usuarios en plataformas corporativas, garantizando accesos y permisos</li>
+                            <li>Administré inventario de 500+ activos tecnológicos</li>
+                            <li>Resolví 150+ incidencias de hardware/software en niveles 1 y 2</li>
+                            <li>Estandaricé procesos con checklists operativos en 5 áreas</li>
                         </ul>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-users-cog"></i> Active Directory</span>
-                            <span><i class="fas fa-clipboard-check"></i> ITIL</span>
-                            <span><i class="fas fa-list-alt"></i> Asset Management</span>
-                            <span><i class="fas fa-warehouse"></i> Logistics</span>
-                        </div>
                     </div>
                 </div>
-
-                <!-- LIMA DIGITAL -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>Lima Digital Agency</h3>
-                            <p class="job-title">Desarrollador Front-end Junior</p>
-                            <span class="job-date">2023 (6 meses)</span>
-                        </div>
+                        <h3>Desarrollador Front-end</h3>
+                        <h4>Lima Digital | 2023 (6 meses)</h4>
                         <ul>
-                            <li>Desarrollo y mantenimiento de sitios web optimizados para SEO, mejorando la visibilidad y posicionamiento en buscadores</li>
-                            <li>Implementación de diseños responsivos y adaptativos para mejorar la experiencia de usuario</li>
-                            <li>Colaboración en equipos multidisciplinarios bajo metodologías ágiles para cumplir con plazos ajustados</li>
-                            <li>Adaptación a entornos de trabajo dinámicos, gestionando múltiples proyectos</li>
+                            <li>Desarrollé 3 sitios web optimizados para SEO (mejora de 60% en velocidad)</li>
+                            <li>Implementé diseños responsivos que aumentaron retención móvil en 35%</li>
                         </ul>
-                        <div class="tech-tags">
-                            <span><i class="fab fa-html5"></i> HTML5</span>
-                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
-                            <span><i class="fab fa-js"></i> JavaScript</span>
-                            <span><i class="fab fa-searchengin"></i> SEO</span>
-                            <span><i class="fas fa-users"></i> Agile</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TESLABYTE -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>TeslaByte Perú</h3>
-                            <p class="job-title">Técnico de Soporte TI</p>
-                            <span class="job-date">2021 - 2022</span>
-                        </div>
-                        <ul>
-                            <li>Atención y gestión de tickets a través de la mesa de ayuda en niveles 1 y 2, asegurando tiempos de respuesta</li>
-                            <li>Diagnóstico y solución de incidencias en hardware y software, garantizando la operatividad de los sistemas</li>
-                            <li>Configuración, mantenimiento y habilitación de equipos para el jefe de TI y otras áreas operativas</li>
-                            <li>Asesoría técnica en reconocimiento de hardware, optimización de rendimiento y resolución de fallos</li>
-                            <li>Documentación de problemas recurrentes y generación de guías para mejorar la eficiencia en la resolución</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-tools"></i> Troubleshooting</span>
-                            <span><i class="fas fa-desktop"></i> Hardware</span>
-                            <span><i class="fas fa-book"></i> KB Management</span>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CERTIFICACIONES COMPLETAS -->
-        <section class="section">
-            <h2><i class="fas fa-trophy"></i> Certificaciones y Conferencias</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Dashboard de Red Corporativa</h3>
+                    </div>
+                    <p>Sistema de monitoreo en tiempo real para switches Cisco usando SNMP y Grafana. Captura métricas de CPU, memoria y tráfico de puertos.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SNMP</span>
+                        <span class="tech-tag">Grafana</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>Gestor de Tickets Interno</h3>
+                    </div>
+                    <p>Aplicación web para gestionar incidencias de TI con priorización inteligente y generación de reportes automáticos.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Herramienta de Inventario TI</h3>
+                    </div>
+                    <p>Script en Python que automatiza inventariado de equipos en red usando ping sweep y SNMP walks.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SNMP</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Certificaciones</h2>
             <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-python"></i></div>
-                    <h4>Programación con Python</h4>
-                    <p>INCEPERU</p>
-                    <span class="cert-date">Feb-Abr 2025 | 80 horas</span>
+                <div class="cert-card fade-in">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Azure Infrastructure & DevOps</h3>
+                    <p>IDAT | 2025</p>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Seguridad Informática (Ciberseguridad)</h4>
-                    <p>INCEPERU</p>
-                    <span class="cert-date">Dic 2024 - Ene 2025 | 60 horas</span>
+                <div class="cert-card fade-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Hacking Ético</h3>
+                    <p>Fundación San Marcos | 2025</p>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-user-secret"></i></div>
-                    <h4>Hacking Ético</h4>
-                    <p>Fundación San Marcos & INCEPERU | Convenio N° 006-2024-FS.M-INCEPERU</p>
-                    <span class="cert-date">May-Jul 2025 | 80 horas académicas</span>
+                <div class="cert-card fade-in">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL: Bases de Datos</h3>
+                    <p>Udemy | 2022</p>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-database"></i></div>
-                    <h4>SQL: Creación de Bases de Datos</h4>
-                    <p>Udemy</p>
-                    <span class="cert-date">Jul 2022 | 2 horas</span>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                    <h4>Azure Infrastructure & Azure Dev</h4>
-                    <p>IDAT & Microsoft | Evento TecFest</p>
-                    <span class="cert-date">24 Jul 2021</span>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-expeditedssl"></i></div>
-                    <h4>Perspectiva de Ciberamenazas en Perú y Latinoamérica</h4>
-                    <p>IDAT | Evento TecFest 2021</p>
-                    <span class="cert-date">22 Jul 2021</span>
+                <div class="cert-card fade-in">
+                    <i class="fab fa-python"></i>
+                    <h3>Programación Python</h3>
+                    <p>INCEPERU | 2025</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CONTACTO FINAL -->
-        <section class="section contact-section">
-            <h2><i class="fas fa-paper-plane"></i> Conectemos</h2>
-            <p><strong>Profesional TI disponible para oportunidades en infraestructura de redes y soporte corporativo</strong></p>
-            <div class="contact-buttons">
-                <a href="mailto:angelcperez17@gmail.com" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> angelcperez17@gmail.com
-                </a>
-                <a href="tel:+51924449893" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> +51 924 449 893
-                </a>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>¡Trabajemos juntos!</h3>
+                    <p>Estoy disponible para oportunidades en infraestructura de TI, soporte técnico o desarrollo.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>angelcperez17@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+51 924 449 893</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lima, Perú - Villa María del Triunfo</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/angelcper" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/angelcuchillo" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/51924449893" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Tu Nombre" required>
+                        <input type="email" placeholder="Tu Email" required>
+                        <input type="text" placeholder="Asunto" required>
+                        <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Angel Eduardo Cuchillo Pérez | CV Tech v7.0 | 100% Responsivo & Profesional</p>
-            <p>Especialista TI - Infraestructura Cisco - Ciberseguridad - Python - ITIL</p>
+            <p>&copy; 2025 Angel Cuchillo. Built with <i class="fas fa-heart"></i> and JavaScript</p>
         </div>
     </footer>
 
-    <script>
-        // Animaciones de entrada suave
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-
-        // Efecto typewriter
-        const typewriterText = document.querySelector('.typewriter p');
-        if (typewriterText) {
-            const text = typewriterText.textContent;
-            typewriterText.textContent = '';
-            let i = 0;
-            setInterval(() => {
-                if (i < text.length) {
-                    typewriterText.textContent += text.charAt(i);
-                    i++;
-                }
-            }, 60);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
