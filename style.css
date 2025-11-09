@@ -1,7 +1,7 @@
 /* ============================================
-   CV MOBILE-FIRST RESPONSIVE v6.0
-   TU CV COMPLETO - 100% RESPONSIVO
-   GitHub Pages Ready | No Errors
+   CV MOBILE-FIRST RESPONSIVE v7.0
+   TU CV COMPLETO - 100% PROFESIONAL
+   GitHub Pages Ready | No Syntax Errors
 ============================================ */
 
 /* VARIABLES Y RESET */
@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px; /* BASE MOBILE */
+    font-size: 16px;
 }
 
 body {
@@ -118,7 +118,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 1.8rem; /* MOBILE */
+    font-size: 1.8rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -128,7 +128,7 @@ body {
 }
 
 .typewriter p {
-    font-size: 1rem; /* MOBILE */
+    font-size: 1rem;
     color: var(--text-muted);
     border-right: 2px solid var(--primary);
     white-space: nowrap;
@@ -151,18 +151,18 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 1.5rem; /* MOBILE */
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary);
 }
 
 .stat-label {
-    font-size: 0.7rem; /* MOBILE */
+    font-size: 0.7rem;
     color: var(--text-muted);
     text-transform: uppercase;
 }
 
-/* CONTACT MOBILE (SIEMPRE VISIBLE, NO TAPA) */
+/* CONTACT MOBILE (SIEMPRE VISIBLE) */
 .contact-mobile {
     display: flex;
     gap: 10px;
@@ -204,13 +204,13 @@ body {
 
 /* FLOATING - DESKTOP ONLY */
 .floating-contact {
-    display: none; /* OCULTO EN MOBILE */
+    display: none;
 }
 
 /* SECCIONES */
 .section {
     margin: 60px 0;
-    padding: 25px; /* MOBILE */
+    padding: 25px;
     background: var(--card-bg);
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -218,7 +218,7 @@ body {
 }
 
 .section h2 {
-    font-size: 1.5rem; /* MOBILE */
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--primary);
     display: flex;
@@ -229,13 +229,13 @@ body {
 /* PERFIL */
 .perfil-card {
     background: var(--glass);
-    padding: 20px; /* MOBILE */
+    padding: 20px;
     border-radius: 12px;
 }
 
 .perfil-text {
     text-align: left;
-    font-size: 0.95rem; /* MOBILE */
+    font-size: 0.95rem;
     margin-bottom: 15px;
 }
 
@@ -249,10 +249,10 @@ body {
 
 .tech-tag {
     background: rgba(14, 165, 233, 0.1);
-    padding: 6px 12px; /* MOBILE */
+    padding: 6px 12px;
     border-radius: 20px;
     border: 1px solid var(--primary);
-    font-size: 0.8rem; /* MOBILE */
+    font-size: 0.8rem;
     transition: all 0.3s ease;
 }
 
@@ -274,10 +274,10 @@ body {
     font-weight: bold;
 }
 
-/* TIMELINE - MOBILE */
+/* TIMELINE */
 .timeline {
     position: relative;
-    padding-left: 25px; /* MOBILE */
+    padding-left: 25px;
 }
 
 .timeline::before {
@@ -296,7 +296,7 @@ body {
 
 .timeline-marker {
     position: absolute;
-    left: -22px; /* MOBILE */
+    left: -22px;
     top: 20px;
     width: 14px; height: 14px;
     border-radius: 50%;
@@ -306,7 +306,7 @@ body {
 
 .timeline-content {
     background: var(--glass);
-    padding: 20px; /* MOBILE */
+    padding: 20px;
     border-radius: 12px;
 }
 
@@ -319,9 +319,9 @@ body {
 
 .job-date {
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    padding: 5px 12px; /* MOBILE */
+    padding: 5px 12px;
     border-radius: 20px;
-    font-size: 0.75rem; /* MOBILE */
+    font-size: 0.75rem;
     font-weight: bold;
     width: fit-content;
 }
@@ -329,7 +329,7 @@ body {
 .job-title {
     color: var(--accent);
     font-weight: 600;
-    font-size: 0.95rem; /* MOBILE */
+    font-size: 0.95rem;
 }
 
 .job-card ul {
@@ -338,7 +338,7 @@ body {
 }
 
 .job-card li {
-    font-size: 0.9rem; /* MOBILE */
+    font-size: 0.9rem;
     margin-bottom: 8px;
 }
 
@@ -351,15 +351,15 @@ body {
 
 .tech-tags span {
     background: rgba(14, 165, 233, 0.15);
-    padding: 4px 10px; /* MOBILE */
+    padding: 4px 10px;
     border-radius: 15px;
-    font-size: 0.75rem; /* MOBILE */
+    font-size: 0.75rem;
 }
 
 /* SKILLS */
 .skill-category {
     background: var(--glass);
-    padding: 20px; /* MOBILE */
+    padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
 }
@@ -369,7 +369,7 @@ body {
 }
 
 .skill-item span {
-    font-size: 0.85rem; /* MOBILE */
+    font-size: 0.85rem;
     margin-bottom: 5px;
     display: block;
 }
@@ -381,40 +381,29 @@ body {
     overflow: hidden;
 }
 
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    border-radius: 10px;
-}
-
 /* CERTIFICACIONES */
 .certs-grid {
     display: grid;
-    grid-template-columns: 1fr; /* MOBILE: 1 columna */
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
 .cert-card {
     background: var(--glass);
-    padding: 20px; /* MOBILE */
+    padding: 20px;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
-.cert-card:hover {
-    transform: translateY(-5px);
-    border: 1px solid var(--primary);
-}
-
 .cert-icon {
-    font-size: 2.5rem; /* MOBILE */
+    font-size: 2.5rem;
     margin-bottom: 15px;
     color: var(--primary);
 }
 
 .cert-card h4 {
-    font-size: 1rem; /* MOBILE */
+    font-size: 1rem;
     margin-bottom: 5px;
 }
 
@@ -424,10 +413,6 @@ body {
 }
 
 /* CONTACTO */
-.contact-section {
-    text-align: center;
-}
-
 .contact-buttons {
     display: flex;
     flex-direction: column;
@@ -438,7 +423,7 @@ body {
 .btn {
     width: 100%;
     max-width: 280px;
-    padding: 14px 30px; /* MOBILE */
+    padding: 14px 30px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -450,26 +435,19 @@ body {
     font-size: 0.95rem;
 }
 
-.btn-primary { background: var(--primary); color: white; }
-.btn-secondary { background: var(--accent); color: white; }
-
 /* FOOTER */
 footer {
     text-align: center;
     padding: 30px 20px;
     color: var(--text-muted);
-    font-size: 0.8rem; /* MOBILE */
+    font-size: 0.8rem;
 }
 
 /* ============================================
-   BREAKPOINTS - TABLET (768px+)
+   BREAKPOINTS - TABLET y DESKTOP
 ============================================ */
 @media (min-width: 768px) {
     html { font-size: 18px; }
-
-    .hero {
-        padding: 100px 5%;
-    }
 
     .hero-content {
         flex-direction: row;
@@ -490,11 +468,11 @@ footer {
     }
 
     .contact-mobile {
-        display: none; /* Oculto en tablet+ */
+        display: none;
     }
 
     .floating-contact {
-        display: flex; /* MOSTRAR */
+        display: flex;
         position: fixed;
         bottom: 30px; right: 30px;
         flex-direction: column;
@@ -534,7 +512,7 @@ footer {
     }
 
     .certs-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-buttons {
@@ -547,9 +525,6 @@ footer {
     }
 }
 
-/* ============================================
-   BREAKPOINTS - DESKTOP (1024px+)
-============================================ */
 @media (min-width: 1024px) {
     html { font-size: 20px; }
 
@@ -584,7 +559,7 @@ footer {
     }
 
     .certs-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .skills-dashboard {
