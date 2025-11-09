@@ -81,7 +81,8 @@
                         <span>IDAT - Desarrollo de Sistemas de Información</span>
                     </div>
                     <div class="badge">
-                        <i class="fab fa-cisco"></i>
+                        <!-- Icono de Cisco reemplazado por genérico -->
+                        <i class="fas fa-network-wired"></i>
                         <span>Cisco Networking</span>
                     </div>
                     <div class="badge">
@@ -288,10 +289,11 @@
         <div class="container">
             <h2 class="section-title">Certificaciones</h2>
             <div class="certs-grid">
+                <!-- AÑADIDO: Certificado faltante -->
                 <div class="cert-card fade-in">
                     <div class="cert-header">
-                        <i class="fas fa-certificate"></i>
-                        <span class="cert-year">2025</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="cert-year">2021</span>
                     </div>
                     <h3>Azure Infrastructure & DevOps</h3>
                     <p>IDAT</p>
@@ -360,11 +362,12 @@
                         <a href="https://wa.me/51924449893" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+                <!-- Formulario modificado para WhatsApp -->
                 <form class="contact-form fade-in" id="contactForm">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Asunto" required>
-                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="asunto" placeholder="Asunto" required>
+                    <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                 </form>
             </div>
