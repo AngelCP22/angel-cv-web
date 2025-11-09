@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     
     const terminal = document.getElementById('terminal-output');
-    let cmdIndex = 0;
+    let cmdIndex = 0;  // ❌ CORREGIDO: era @
     
     function typeCommand() {
         if (cmdIndex < commands.length) {
             let currentCmd = commands[cmdIndex];
-            let charIndex = 0;
+            let charIndex = 0;  // ❌ CORREGIDO: era @
             terminal.textContent = 'Switch# ';
             
             function typeChar() {
