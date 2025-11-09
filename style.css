@@ -1,7 +1,7 @@
 /* ============================================
-   CV MOBILE-FIRST - RESPONSIVO 100%
+   CV MOBILE-FIRST RESPONSIVE v5.0
    Breakpoints: 768px (tablet), 1024px (desktop)
-   GitHub Pages Ready | No errors
+   GitHub Pages Ready | No Errors
 ============================================ */
 
 /* 1. VARIABLES Y RESET */
@@ -23,28 +23,27 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px; /* Base para móvil */
+    font-size: 16px; /* BASE MOBILE */
 }
 
 body {
-    font-family: 'Fira Code', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Fira Code', 'Segoe UI', system-ui, sans-serif;
     background: var(--darker);
     color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden; /* PREVIENE SCROLL HORIZONTAL */
+    line-height: 1.7;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2. CONTENEDOR PRINCIPAL */
+/* 2. CONTENEDOR */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5%; /* Padding relativo al ancho */
+    padding: 0 5%;
 }
 
-/* 3. BACKGROUND ANIMATION */
+/* 3. BACKGROUND */
 .bg-animation {
     position: fixed;
     top: 0; left: 0;
@@ -78,7 +77,6 @@ body {
     align-items: center;
     padding: 80px 5% 60px;
     text-align: center;
-    position: relative;
 }
 
 .hero-content {
@@ -87,21 +85,20 @@ body {
     align-items: center;
     gap: 25px;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .profile-wrapper {
     position: relative;
     width: fit-content;
-    margin: 0 auto;
 }
 
 .profile-img {
     width: 140px; height: 140px;
     border-radius: 50%;
     border: 3px solid var(--primary);
-    display: block;
-    max-width: 100%; /* RESPONSIVO */
+    max-width: 100%; /* RESPONSIVE */
+    height: auto;
 }
 
 .profile-glow {
@@ -126,7 +123,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.2;
-    word-wrap: break-word;
 }
 
 .typewriter p {
@@ -148,7 +144,7 @@ body {
 
 .stat-item {
     text-align: center;
-    min-width: 80px; /* Evita que se rompan */
+    min-width: 80px;
 }
 
 .stat-number {
@@ -164,13 +160,14 @@ body {
     text-transform: uppercase;
 }
 
-/* 5. CONTACT BAR - MOBILE (ESTÁTICO, NO TAPA) */
+/* 5. CONTACT MOBILE (ESTÁTICO) */
 .contact-mobile {
     display: flex;
     gap: 10px;
     margin-top: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0 5%;
 }
 
 .contact-btn {
@@ -202,7 +199,7 @@ body {
     color: white;
 }
 
-/* 6. FLOATING CONTACT - DESKTOP ONLY */
+/* 6. FLOATING - DESKTOP ONLY */
 .floating-contact {
     display: none; /* OCULTO EN MOBILE */
 }
@@ -224,6 +221,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    word-wrap: break-word;
 }
 
 /* 8. PERFIL */
@@ -346,11 +344,6 @@ body {
     margin-bottom: 20px;
 }
 
-.skill-category h4 {
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-
 .skill-item {
     margin-bottom: 15px;
 }
@@ -385,207 +378,4 @@ body {
     background: var(--glass);
     padding: 20px; /* MOBILE */
     border-radius: 12px;
-    text-align: center;
-}
-
-.cert-icon {
-    font-size: 2.5rem; /* MOBILE */
-    margin-bottom: 15px;
-    color: var(--primary);
-}
-
-.cert-card h4 {
-    font-size: 1rem; /* MOBILE */
-}
-
-.cert-date {
-    color: var(--accent);
-    font-size: 0.8rem;
-}
-
-/* 12. CONTACTO */
-.contact-section {
-    text-align: center;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.btn {
-    width: 100%;
-    max-width: 280px;
-    padding: 14px 30px; /* MOBILE */
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-secondary {
-    background: var(--accent);
-    color: white;
-}
-
-/* 13. FOOTER */
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    color: var(--text-muted);
-    font-size: 0.8rem; /* MOBILE */
-}
-
-/* ============================================
-   BREAKPOINTS - TABLET & DESKTOP
-============================================ */
-
-@media (min-width: 768px) {
-    /* Tablet */
-    html { font-size: 18px; } /* Aumenta base */
-
-    .hero {
-        padding: 100px 5%;
-    }
-
-    .hero-content {
-        flex-direction: row;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .typewriter p {
-        font-size: 1.2rem;
-    }
-
-    .stats {
-        justify-content: flex-start;
-    }
-
-    .contact-mobile {
-        display: none; /* Oculto en tablet+ */
-    }
-
-    .floating-contact {
-        display: flex; /* MOSTRAR en desktop */
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 1000;
-    }
-
-    .float-btn {
-        width: 50px; height: 50px;
-        border-radius: 50%;
-        background: var(--primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .section {
-        padding: 40px;
-    }
-
-    .section h2 {
-        font-size: 2rem;
-    }
-
-    .timeline {
-        padding-left: 35px;
-    }
-
-    .timeline::before {
-        left: 12px;
-    }
-
-    .timeline-marker {
-        left: -28px;
-    }
-
-    .certs-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    }
-
-    .contact-buttons {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .btn {
-        width: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    /* Desktop */
-    html { font-size: 20px; }
-
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-
-    .profile-img {
-        width: 160px; height: 160px;
-    }
-
-    .section {
-        padding: 50px;
-    }
-
-    .certs-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    }
-
-    .timeline {
-        padding-left: 40px;
-    }
-
-    .timeline::before {
-        left: 15px;
-    }
-
-    .timeline-marker {
-        left: -33px;
-        width: 18px; height: 18px;
-    }
-}
-
-/* 14. PREVENT OVERFLOW */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-}
-
-pre, code {
-    overflow-x: auto;
-}
-
-/* 15. MEJORA PERFORMANCE */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
+    text-align
