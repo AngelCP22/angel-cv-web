@@ -26,7 +26,9 @@
                 <div class="typewriter"><p class="tagline">Especialista en Infraestructura de Redes</p></div>
                 <div class="stats">
                     <div class="stat-item"><span class="stat-number">4+</span><span class="stat-label">Años</span></div>
-                    <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Certificados</span></div>
+                    <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">Certs</span></div>
+                    <div class="stat-item"><span class="stat-number">200+</span><span class="stat-label">Tickets</span></div>
+                </div>
             </div>
         </div>
     </header>
@@ -245,4 +247,66 @@
                     <span class="cert-date">2022</span>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-microsoft"></i></
+                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                    <h4>Azure Fundamentals</h4>
+                    <p>IDAT & Microsoft</p>
+                    <span class="cert-date">2021</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="section contact-section">
+            <h2><i class="fas fa-paper-plane"></i> Conectemos</h2>
+            <p>¿Buscas un profesional TI proactivo para tu equipo?</p>
+            <div class="contact-buttons">
+                <a href="mailto:angelcperez17@gmail.com" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Enviar Email
+                </a>
+                <a href="tel:+51924449893" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Angel Cuchillo | CV Tech v5.0 | Responsive & GitHub Pages Ready</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones suaves
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Typewriter
+        const typewriterText = document.querySelector('.typewriter p');
+        if (typewriterText) {
+            const text = typewriterText.textContent;
+            typewriterText.textContent = '';
+            let i = 0;
+            setInterval(() => {
+                if (i < text.length) {
+                    typewriterText.textContent += text.charAt(i);
+                    i++;
+                }
+            }, 60);
+        }
+    </script>
+</body>
+</html>
