@@ -1,20 +1,21 @@
 /* ============================================
-   CV TECNOLÓGICO - 100% RESPONSIVO
-   Mobile First Design - GitHub Pages Ready
+   CV MOBILE-FIRST - RESPONSIVO 100%
+   Breakpoints: 768px (tablet), 1024px (desktop)
+   GitHub Pages Ready | No errors
 ============================================ */
 
-/* Variables y Reset */
+/* 1. VARIABLES Y RESET */
 :root {
     --primary: #0ea5e9;
     --accent: #10b981;
     --darker: #020617;
     --text: #e2e8f0;
     --text-muted: #94a3b8;
-    --card-bg: rgba(15, 23, 42, 0.8);
-    --glass: rgba(30, 41, 59, 0.5);
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --glass: rgba(30, 41, 59, 0.4);
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,45 +23,45 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base para móvil */
 }
 
 body {
-    font-family: 'Fira Code', 'Segoe UI', monospace, sans-serif;
+    font-family: 'Fira Code', 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: var(--darker);
     color: var(--text);
-    line-height: 1.7;
-    overflow-x: hidden;
+    line-height: 1.6;
+    overflow-x: hidden; /* PREVIENE SCROLL HORIZONTAL */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Contenedor principal */
+/* 2. CONTENEDOR PRINCIPAL */
 .container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 5%; /* Padding relativo al ancho */
 }
 
-/* Background Animation */
+/* 3. BACKGROUND ANIMATION */
 .bg-animation {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.2;
     pointer-events: none;
 }
 
 .tech-grid {
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 120%; height: 120%;
     background-image: 
         linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
     background-size: 40px 40px;
-    animation: gridMove 25s linear infinite;
+    animation: gridMove 30s linear infinite;
 }
 
 @keyframes gridMove {
@@ -68,10 +69,15 @@ body {
     100% { transform: translate(40px, 40px); }
 }
 
-/* Header - Mobile First */
+/* 4. HEADER - MOBILE FIRST */
 .hero {
-    padding: 60px 0 40px;
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 5% 60px;
+    text-align: center;
     position: relative;
 }
 
@@ -79,29 +85,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    text-align: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .profile-wrapper {
     position: relative;
     width: fit-content;
+    margin: 0 auto;
 }
 
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 140px; height: 140px;
     border-radius: 50%;
     border: 3px solid var(--primary);
     display: block;
+    max-width: 100%; /* RESPONSIVO */
 }
 
 .profile-glow {
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    inset: -10px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--primary), transparent);
     filter: blur(20px);
@@ -110,21 +115,22 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
 }
 
 .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* MOBILE */
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .typewriter p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* MOBILE */
     color: var(--text-muted);
     border-right: 2px solid var(--primary);
     white-space: nowrap;
@@ -135,64 +141,76 @@ body {
 .stats {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 25px;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .stat-item {
     text-align: center;
+    min-width: 80px; /* Evita que se rompan */
 }
 
 .stat-number {
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* MOBILE */
     font-weight: bold;
     color: var(--primary);
 }
 
 .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem; /* MOBILE */
     color: var(--text-muted);
     text-transform: uppercase;
 }
 
-/* Contact Bar - MOBILE (ahora es estático) */
-.contact-bar-mobile {
+/* 5. CONTACT BAR - MOBILE (ESTÁTICO, NO TAPA) */
+.contact-mobile {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 30px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.contact-bar-mobile .contact-link {
+.contact-btn {
     background: var(--glass);
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 25px;
     color: var(--text);
     text-decoration: none;
+    font-size: 0.85rem;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(14, 165, 233, 0.2);
+    border: 1px solid rgba(14, 165, 233, 0.3);
     transition: all 0.3s ease;
 }
 
-.contact-bar-mobile .contact-link:hover {
+.contact-btn:hover {
     background: rgba(14, 165, 233, 0.2);
     transform: translateY(-2px);
 }
 
-/* Floating Contact - SOLO DESKTOP */
-.floating-contact {
-    display: none; /* Oculto por defecto en móvil */
+.contact-btn.whatsapp {
+    background: rgba(37, 211, 102, 0.1);
+    border-color: #25d366;
 }
 
-/* Secciones */
+.contact-btn.whatsapp:hover {
+    background: #25d366;
+    color: white;
+}
+
+/* 6. FLOATING CONTACT - DESKTOP ONLY */
+.floating-contact {
+    display: none; /* OCULTO EN MOBILE */
+}
+
+/* 7. SECCIONES */
 .section {
     margin: 60px 0;
-    padding: 30px 20px;
+    padding: 25px; /* MOBILE */
     background: var(--card-bg);
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -200,61 +218,55 @@ body {
 }
 
 .section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
+    font-size: 1.5rem; /* MOBILE */
+    margin-bottom: 20px;
     color: var(--primary);
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Perfil */
+/* 8. PERFIL */
 .perfil-card {
     background: var(--glass);
-    padding: 25px;
+    padding: 20px; /* MOBILE */
     border-radius: 12px;
-    border: 1px solid rgba(14, 165, 233, 0.15);
 }
 
 .perfil-text {
     text-align: left;
+    font-size: 0.95rem; /* MOBILE */
     margin-bottom: 15px;
-    font-size: 1rem;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .tech-tag {
     background: rgba(14, 165, 233, 0.1);
-    padding: 8px 15px;
+    padding: 6px 12px; /* MOBILE */
     border-radius: 20px;
     border: 1px solid var(--primary);
-    font-size: 0.85rem;
+    font-size: 0.8rem; /* MOBILE */
     transition: all 0.3s ease;
 }
 
-.tech-tag:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-}
-
-/* Timeline - Mobile */
+/* 9. TIMELINE - MOBILE */
 .timeline {
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px; /* MOBILE */
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 10px;
-    top: 0;
-    bottom: 0;
+    left: 8px;
+    top: 0; bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, var(--primary), var(--accent));
 }
@@ -266,10 +278,9 @@ body {
 
 .timeline-marker {
     position: absolute;
-    left: -25px;
+    left: -22px; /* MOBILE */
     top: 20px;
-    width: 16px;
-    height: 16px;
+    width: 14px; height: 14px;
     border-radius: 50%;
     background: var(--primary);
     border: 3px solid var(--darker);
@@ -277,34 +288,30 @@ body {
 
 .timeline-content {
     background: var(--glass);
-    padding: 20px;
+    padding: 20px; /* MOBILE */
     border-radius: 12px;
-    border: 1px solid rgba(14, 165, 233, 0.1);
 }
 
 .job-header {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     margin-bottom: 15px;
 }
 
 .job-date {
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    padding: 5px 15px;
+    padding: 5px 12px; /* MOBILE */
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* MOBILE */
     font-weight: bold;
     width: fit-content;
-}
-
-.job-card h3 {
-    font-size: 1.2rem;
 }
 
 .job-title {
     color: var(--accent);
     font-weight: 600;
+    font-size: 0.95rem; /* MOBILE */
 }
 
 .job-card ul {
@@ -313,8 +320,8 @@ body {
 }
 
 .job-card li {
+    font-size: 0.9rem; /* MOBILE */
     margin-bottom: 8px;
-    font-size: 0.95rem;
 }
 
 .tech-tags {
@@ -326,28 +333,22 @@ body {
 
 .tech-tags span {
     background: rgba(14, 165, 233, 0.15);
-    padding: 5px 12px;
+    padding: 4px 10px; /* MOBILE */
     border-radius: 15px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    font-size: 0.75rem; /* MOBILE */
 }
 
-/* Skills */
+/* 10. SKILLS */
 .skill-category {
     background: var(--glass);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 20px; /* MOBILE */
+    border-radius: 12px;
     margin-bottom: 20px;
 }
 
 .skill-category h4 {
     color: var(--primary);
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .skill-item {
@@ -355,7 +356,7 @@ body {
 }
 
 .skill-item span {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* MOBILE */
     margin-bottom: 5px;
     display: block;
 }
@@ -373,45 +374,38 @@ body {
     border-radius: 10px;
 }
 
-/* Certificaciones */
+/* 11. CERTIFICACIONES */
 .certs-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* MOBILE: 1 columna */
     gap: 20px;
 }
 
 .cert-card {
     background: var(--glass);
-    padding: 20px;
+    padding: 20px; /* MOBILE */
     border-radius: 12px;
-    border: 1px solid rgba(14, 165, 233, 0.1);
     text-align: center;
 }
 
 .cert-icon {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* MOBILE */
     margin-bottom: 15px;
     color: var(--primary);
 }
 
 .cert-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-size: 1rem; /* MOBILE */
 }
 
 .cert-date {
     color: var(--accent);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
-/* Contacto */
+/* 12. CONTACTO */
 .contact-section {
     text-align: center;
-}
-
-.contact-section p {
-    font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 .contact-buttons {
@@ -422,53 +416,47 @@ body {
 }
 
 .btn {
-    padding: 14px 30px;
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 30px; /* MOBILE */
     border-radius: 25px;
     text-decoration: none;
-    font-weight: bold;
-    display: inline-flex;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-    width: 100%;
-    max-width: 280px;
-    justify-content: center;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, var(--accent), var(--primary));
+    background: var(--accent);
     color: white;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
-}
-
-/* Footer */
+/* 13. FOOTER */
 footer {
     text-align: center;
     padding: 30px 20px;
     color: var(--text-muted);
-    margin-top: 60px;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* MOBILE */
 }
 
 /* ============================================
-   MEDIA QUERIES - TABLET & DESKTOP
+   BREAKPOINTS - TABLET & DESKTOP
 ============================================ */
 
 @media (min-width: 768px) {
+    /* Tablet */
+    html { font-size: 18px; } /* Aumenta base */
+
     .hero {
-        padding: 100px 0 80px;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
+        padding: 100px 5%;
     }
 
     .hero-content {
@@ -478,66 +466,67 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .typewriter p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .stats {
         justify-content: flex-start;
     }
 
-    /* Contact Bar Desktop (ahora es flotante pero NO tapa) */
-    .contact-bar-mobile {
-        display: none; /* Oculto en desktop */
+    .contact-mobile {
+        display: none; /* Oculto en tablet+ */
     }
 
-    .contact-bar {
+    .floating-contact {
+        display: flex; /* MOSTRAR en desktop */
         position: fixed;
         bottom: 30px;
         right: 30px;
-        display: flex;
         flex-direction: column;
         gap: 10px;
-        background: var(--glass);
-        padding: 15px;
-        border-radius: 50px;
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(14, 165, 233, 0.2);
-        z-index: 100;
+        z-index: 1000;
     }
 
-    .contact-bar .contact-link {
-        background: rgba(14, 165, 233, 0.1);
-        padding: 10px;
+    .float-btn {
+        width: 50px; height: 50px;
         border-radius: 50%;
-        color: var(--text);
-        text-decoration: none;
-        width: 50px;
-        height: 50px;
+        background: var(--primary);
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
+        text-decoration: none;
         transition: all 0.3s ease;
     }
 
-    .contact-bar .contact-link span {
-        display: none; /* Oculta texto en desktop */
+    .section {
+        padding: 40px;
     }
 
-    .contact-bar .contact-link:hover {
-        background: var(--primary);
-        transform: scale(1.1);
+    .section h2 {
+        font-size: 2rem;
     }
 
-    /* Certificaciones en grid */
+    .timeline {
+        padding-left: 35px;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-marker {
+        left: -28px;
+    }
+
     .certs-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     }
 
-    /* Botones lado a lado */
     .contact-buttons {
         flex-direction: row;
         justify-content: center;
@@ -549,16 +538,23 @@ footer {
 }
 
 @media (min-width: 1024px) {
+    /* Desktop */
+    html { font-size: 20px; }
+
     .hero-text h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+
+    .profile-img {
+        width: 160px; height: 160px;
     }
 
     .section {
-        padding: 40px;
+        padding: 50px;
     }
 
-    .section h2 {
-        font-size: 2.2rem;
+    .certs-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     }
 
     .timeline {
@@ -571,5 +567,25 @@ footer {
 
     .timeline-marker {
         left: -33px;
+        width: 18px; height: 18px;
+    }
+}
+
+/* 14. PREVENT OVERFLOW */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+pre, code {
+    overflow-x: auto;
+}
+
+/* 15. MEJORA PERFORMANCE */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
