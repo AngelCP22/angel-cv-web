@@ -118,11 +118,28 @@ document.addEventListener('DOMContentLoaded', () => {
         themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
 
-    // Contact Form
+    // MODIFICADO: Contact Form to WhatsApp
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('¡Mensaje enviado! Me pondré en contacto contigo pronto.');
+        
+        // Obtener valores del formulario
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const asunto = document.getElementById('asunto').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        // Construir mensaje para WhatsApp
+        const whatsappMessage = `*Nuevo mensaje desde tu CV Web*%0A%0A*Nombre:* ${nombre}%0A*Email:* ${email}%0A*Asunto:* ${asunto}%0A*Mensaje:*%0A${mensaje}`;
+        
+        // Número de WhatsApp (reemplaza si es diferente)
+        const phoneNumber = '51924449893';
+        
+        // Abrir WhatsApp con el mensaje predefinido
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // Limpiar formulario
         contactForm.reset();
     });
 
