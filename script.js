@@ -1,53 +1,52 @@
-// Smooth Scroll y Animaciones
 document.addEventListener('DOMContentLoaded', () => {
-    // Código de animación para el hero
-    const codeLines = [
-        'interface GigabitEthernet0/1',
-        '  description Conexion a VLAN 10',
-        '  switchport mode access',
-        '  switchport access vlan 10',
-        '  spanning-tree portfast',
-        '  no shutdown',
-        '!',
-        'ip route 0.0.0.0 0.0.0.0 192.168.1.1',
-        '!',
+    // Terminal Animation
+    const commands = [
         'show ip interface brief',
-        'show vlan brief'
+        'show vlan brief',
+        'show spanning-tree summary',
+        'show wireless client summary',
+        'configure terminal',
+        'interface vlan 10',
+        'ip address 192.168.10.1 255.255.255.0',
+        'no shutdown',
+        'exit',
+        'write memory'
     ];
     
-    let codeDisplay = document.getElementById('code-display');
-    let lineIndex = 0;
+    const terminal = document.getElementById('terminal-output');
+    let cmdIndex = 0;
     
-    function typeCode() {
-        if (lineIndex < codeLines.length) {
-            let currentLine = codeLines[lineIndex];
+    function typeCommand() {
+        if (cmdIndex < commands.length) {
+            let currentCmd = commands[cmdIndex];
             let charIndex = 0;
+            terminal.textContent = 'Switch# ';
             
             function typeChar() {
-                if (charIndex < currentLine.length) {
-                    codeDisplay.textContent += currentLine[charIndex];
+                if (charIndex < currentCmd.length) {
+                    terminal.textContent += currentCmd[charIndex];
                     charIndex++;
                     setTimeout(typeChar, 50);
                 } else {
-                    codeDisplay.textContent += '\n';
-                    lineIndex++;
-                    setTimeout(typeCode, 500);
+                    terminal.textContent += '\n';
+                    cmdIndex++;
+                    setTimeout(typeCommand, 800);
                 }
             }
             typeChar();
         } else {
             setTimeout(() => {
-                codeDisplay.textContent = '';
-                lineIndex = 0;
-                setTimeout(typeCode, 1000);
+                terminal.textContent = '';
+                cmdIndex = 0;
+                setTimeout(typeCommand, 1200);
             }, 2000);
         }
     }
     
-    typeCode();
+    typeCommand();
 
-    // Typewriter effect para el título
-    const typewriterText = "Hola, soy Angel Cuchillo";
+    // Typewriter Effect
+    const typewriterText = "Especialista en Infraestructura de Redes & Ciberseguridad";
     const typewriterElement = document.querySelector('.typewriter');
     let i = 0;
     
@@ -55,16 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i < typewriterText.length) {
             typewriterElement.textContent = typewriterText.substring(0, i + 1);
             i++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 80);
         }
     }
     
-    setTimeout(typeWriter, 500);
+    setTimeout(typeWriter, 1000);
 
-    // Scroll animations
+    // Scroll Animations
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -72,46 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Animar barras de habilidades
+                // Animate skill bars
                 if (entry.target.classList.contains('skill-category')) {
-                    const skillBars = entry.target.querySelectorAll('.skill-bar');
-                    skillBars.forEach(bar => {
-                        const percent = bar.dataset.skill;
-                        const progressBar = bar.querySelector('.bar-progress');
+                    const progressBars = entry.target.querySelectorAll('.progress');
+                    progressBars.forEach(bar => {
+                        const width = bar.dataset.width;
                         setTimeout(() => {
-                            progressBar.style.width = percent + '%';
+                            bar.style.width = width + '%';
                         }, 300);
-                    });
-                }
-                
-                // Animar números estadísticos
-                if (entry.target.classList.contains('about-stats')) {
-                    const stats = entry.target.querySelectorAll('.number');
-                    stats.forEach(stat => {
-                        const target = parseInt(stat.dataset.count);
-                        let current = 0;
-                        const increment = target / 50;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                stat.textContent = target + (target === 500 ? '+' : '') + (target === 95 ? '%' : '');
-                                clearInterval(timer);
-                            } else {
-                                stat.textContent = Math.floor(current) + (target === 500 ? '+' : '') + (target === 95 ? '%' : '');
-                            }
-                        }, 20);
                     });
                 }
             }
         });
     }, observerOptions);
 
-    // Observar elementos
+    // Observe elements
     document.querySelectorAll('.fade-in').forEach(el => {
         observer.observe(el);
     });
 
-    // Menú móvil
+    // Mobile Menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -119,46 +98,35 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Modo oscuro
+    // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('i');
     
-    // Cargar tema guardado
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
     
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
     });
     
     function updateThemeIcon(theme) {
-        themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
 
-    // Formulario de contacto
+    // Contact Form
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('¡Gracias por tu mensaje! Me contactaré contigo pronto.');
+        alert('¡Mensaje enviado! Me pondré en contacto contigo pronto.');
         contactForm.reset();
     });
 
-    // Cerrar menú al hacer click en un enlace
+    // Close menu on link click
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
