@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Angel Cuchillo | Especialista en Infraestructura de Redes y Soporte TI">
+    <meta name="description" content="Angel Cuchillo | Especialista en Infraestructura de Redes">
     <title>Angel Cuchillo | Tech Specialist</title>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Background Animation -->
@@ -70,7 +75,7 @@
     <!-- Main -->
     <main class="container">
         <!-- Perfil -->
-        <section class="section slide-in">
+        <section class="section">
             <h2><i class="fas fa-terminal"></i> Sobre mí</h2>
             <div class="perfil-card">
                 <p class="perfil-text">
@@ -87,11 +92,10 @@
         </section>
 
         <!-- Experiencia -->
-        <section class="section slide-in">
+        <section class="section">
             <h2><i class="fas fa-code-branch"></i> Trayectoria Profesional</h2>
-            
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="job-card">
@@ -115,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="job-card">
@@ -135,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="job-card">
@@ -158,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="job-card">
@@ -180,7 +184,7 @@
         </section>
 
         <!-- Skills -->
-        <section class="section slide-in">
+        <section class="section">
             <h2><i class="fas fa-microchip"></i> Stack Tecnológico</h2>
             <div class="skills-dashboard">
                 <div class="skill-category">
@@ -193,24 +197,6 @@
                         <div class="skill-item">
                             <span>Wireless LAN Controller</span>
                             <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>TCP/IP & Routing</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><i class="fas fa-server"></i> Sistemas</h4>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <span>Windows Server / Linux</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Active Directory</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
                         </div>
                     </div>
                 </div>
@@ -250,8 +236,8 @@
         </section>
 
         <!-- Certificaciones -->
-        <section class="section slide-in">
-            <h2><i class="fas fa-trophy"></i> Certificaciones & Logros</h2>
+        <section class="section">
+            <h2><i class="fas fa-trophy"></i> Certificaciones</h2>
             <div class="certs-grid">
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fab fa-python"></i></div>
@@ -293,7 +279,7 @@
         </section>
 
         <!-- Contacto -->
-        <section class="section slide-in contact-section">
+        <section class="section contact-section">
             <h2><i class="fas fa-paper-plane"></i> Conectemos</h2>
             <p>¿Buscas un profesional TI proactivo? ¡Hablemos!</p>
             <div class="contact-buttons">
@@ -310,17 +296,11 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Angel Cuchillo | Desarrollado con <i class="fas fa-heart" style="color: #e74c3c;"></i> y código limpio</p>
-            <p>Disponible en GitHub Pages</p>
         </div>
     </footer>
 
     <script>
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Animación de entrada
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -328,9 +308,8 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        // Observe all sections
         document.querySelectorAll('.section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(30px)';
@@ -338,31 +317,21 @@
             observer.observe(section);
         });
 
-        // Add typing effect
+        // Efecto typewriter
         const typewriterText = document.querySelector('.typewriter p');
-        const text = typewriterText.textContent;
-        typewriterText.textContent = '';
-        
-        let i = 0;
-        const typeInterval = setInterval(() => {
-            if (i < text.length) {
-                typewriterText.textContent += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typeInterval);
-            }
-        }, 50);
-
-        // Mouse parallax effect
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            const techGrid = document.querySelector('.tech-grid');
-            if (techGrid) {
-                techGrid.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
-            }
-        });
+        if (typewriterText) {
+            const text = typewriterText.textContent;
+            typewriterText.textContent = '';
+            let i = 0;
+            const typeInterval = setInterval(() => {
+                if (i < text.length) {
+                    typewriterText.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typeInterval);
+                }
+            }, 50);
+        }
     </script>
 </body>
 </html>
