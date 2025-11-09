@@ -38,7 +38,7 @@ html {
 }
 
 body {
-    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--bg);
@@ -64,10 +64,10 @@ body {
     text-align: center;
     margin-bottom: 4rem;
     color: var(--secondary);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Theme Toggle - FIXED FOR MOBILE OVERLAP */
+/* Theme Toggle */
 #theme-toggle {
     position: fixed;
     top: 20px;
@@ -139,7 +139,7 @@ nav .container {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-links a:hover {
@@ -181,7 +181,7 @@ nav .container {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--secondary);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .hero-content h2 {
@@ -230,7 +230,7 @@ nav .container {
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .btn-primary {
@@ -255,7 +255,7 @@ nav .container {
     border-radius: 8px;
     padding: 20px;
     color: #00ff00;
-    font-family: 'Courier New', monospace;
+    font-family: 'Fira Code', monospace;
     height: 300px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
