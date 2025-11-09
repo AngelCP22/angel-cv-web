@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Cuchillo - TI Infrastructure & Support</title>
+    <title>Angel Cuchillo | Infrastructure & Cybersecurity</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,20 +16,18 @@
     <!-- Navegación -->
     <nav id="navbar">
         <div class="container">
-            <div class="logo">AC</div>
+            <div class="logo">AC <span class="logo-tech">_dev</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#about">Perfil</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experiencia</a></li>
                 <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#certifications">Certificaciones</a></li>
+                <li><a href="#certifications">Certs</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
@@ -38,55 +36,55 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="typewriter">Hola, soy Angel Cuchillo</h1>
-                <h2 class="fade-in">Especialista en Infraestructura de Redes & Soporte TI</h2>
-                <p class="fade-in">Transformando desafíos tecnológicos en soluciones eficientes</p>
-                <div class="hero-buttons fade-in">
-                    <a href="#contact" class="btn btn-primary">Contáctame</a>
-                    <a href="CV_Angel_2025.pdf" class="btn btn-secondary" download>Descargar CV <i class="fas fa-download"></i></a>
+                <h1>Angel Cuchillo</h1>
+                <h2 class="typewriter">Especialista en Infraestructura de Redes & Ciberseguridad</h2>
+                <p>+4 años gestionando infraestructura crítica | Cisco | Python | Ethical Hacking</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Contrátame</a>
+                    <a href="CV_Angel_2025.pdf" class="btn btn-secondary" download>CV PDF <i class="fas fa-download"></i></a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="code-animation">
-                    <pre id="code-display"></pre>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">Cisco IOS</span>
+                    </div>
+                    <pre id="terminal-output"></pre>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Perfil Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Sobre mí</h2>
-            <div class="about-grid fade-in">
-                <div class="about-text">
-                    <p>Técnico en TI con <strong>4+ años de experiencia</strong> en infraestructura de red, soporte técnico y desarrollo. Especializado en gestión de switches Cisco, VLANs, Wireless LAN Controllers y seguridad informática.</p>
-                    <p>Actualmente egresado de <strong>Desarrollo de Sistemas de Información</strong>, combino conocimientos técnicos en red con habilidades de programación para crear soluciones integrales.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="number" data-count="4">0</span>
-                            <span>Años de experiencia</span>
-                        </div>
-                        <div class="stat">
-                            <span class="number" data-count="500">0</span>
-                            <span>+ Tickets resueltos</span>
-                        </div>
-                        <div class="stat">
-                            <span class="number" data-count="95">0</span>
-                            <span>% SLA Cumplido</span>
-                        </div>
-                    </div>
+            <h2 class="section-title">Perfil Técnico</h2>
+            <div class="profile-grid">
+                <div class="profile-text">
+                    <p>Técnico en <strong>Infraestructura de TI</strong> con especialización en redes Cisco, ciberseguridad y automatización. Experiencia en gestión de <strong>VLANs, switches, WLC</strong> y resolución de incidentes críticos.</p>
+                    <p>Egresado de <strong>Desarrollo de Sistemas de Información</strong> con habilidades en Python, scripting y desarrollo de herramientas internas para optimizar operaciones TI.</p>
                 </div>
-                <div class="about-image">
-                    <div class="tech-icons">
-                        <i class="fab fa-cisco" title="Cisco"></i>
-                        <i class="fab fa-python" title="Python"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fas fa-network-wired" title="Redes"></i>
-                        <i class="fab fa-linux" title="Linux"></i>
+                <div class="profile-badges">
+                    <div class="badge">
+                        <i class="fab fa-cisco"></i>
+                        <span>Cisco Networking</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Cybersecurity</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fab fa-python"></i>
+                        <span>Automation</span>
                     </div>
                 </div>
             </div>
@@ -96,117 +94,116 @@
     <!-- Skills Section -->
     <section id="skills" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title fade-in">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-network-wired"></i> Redes & Infraestructura</h3>
-                    <div class="skill-bar" data-skill="90">
-                        <span class="skill-name">VLANs & Switches Cisco</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">90%</span>
-                        </div>
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking</h3>
+                    <div class="skill-item">
+                        <span>Cisco Switches (2960/3560/3850)</span>
+                        <div class="progress-bar"><div class="progress" data-width="90"></div></div>
                     </div>
-                    <div class="skill-bar" data-skill="85">
-                        <span class="skill-name">Wireless LAN Controller</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">85%</span>
-                        </div>
+                    <div class="skill-item">
+                        <span>VLANs, STP, EtherChannel</span>
+                        <div class="progress-bar"><div class="progress" data-width="85"></div></div>
                     </div>
-                    <div class="skill-bar" data-skill="80">
-                        <span class="skill-name">Protocolos TCP/IP</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">80%</span>
-                        </div>
+                    <div class="skill-item">
+                        <span>WLC & Wireless Management</span>
+                        <div class="progress-bar"><div class="progress" data-width="80"></div></div>
                     </div>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-code"></i> Desarrollo & Scripting</h3>
-                    <div class="skill-bar" data-skill="75">
-                        <span class="skill-name">HTML5 & CSS3</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">75%</span>
-                        </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Dev & Scripting</h3>
+                    <div class="skill-item">
+                        <span>Python para Networking</span>
+                        <div class="progress-bar"><div class="progress" data-width="75"></div></div>
                     </div>
-                    <div class="skill-bar" data-skill="70">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">70%</span>
-                        </div>
+                    <div class="skill-item">
+                        <span>JavaScript & Automatización</span>
+                        <div class="progress-bar"><div class="progress" data-width="70"></div></div>
                     </div>
-                    <div class="skill-bar" data-skill="65">
-                        <span class="skill-name">Python</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">65%</span>
-                        </div>
+                    <div class="skill-item">
+                        <span>SQL & Bases de Datos</span>
+                        <div class="progress-bar"><div class="progress" data-width="65"></div></div>
                     </div>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-shield-alt"></i> Ciberseguridad</h3>
-                    <div class="skill-bar" data-skill="75">
-                        <span class="skill-name">Hacking Ético</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">75%</span>
-                        </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                    <div class="skill-item">
+                        <span>Hacking Ético & Pentesting</span>
+                        <div class="progress-bar"><div class="progress" data-width="75"></div></div>
                     </div>
-                    <div class="skill-bar" data-skill="70">
-                        <span class="skill-name">Seguridad en Redes</span>
-                        <div class="bar-container">
-                            <div class="bar-progress"></div>
-                            <span class="skill-percent">70%</span>
-                        </div>
+                    <div class="skill-item">
+                        <span>Seguridad en Redes</span>
+                        <div class="progress-bar"><div class="progress" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Azure Security Fundamentals</span>
+                        <div class="progress-bar"><div class="progress" data-width="60"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Timeline -->
+    <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Experiencia Laboral</h2>
+            <h2 class="section-title">Experiencia Laboral</h2>
             <div class="timeline">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Técnico de Infraestructura de Red</h3>
-                        <h4>ONSITE RANSA | 2024 – 2025</h4>
+                        <div class="timeline-header">
+                            <h3>ONSITE RANSA</h3>
+                            <span class="timeline-date">2024 – 2025</span>
+                        </div>
+                        <h4>Técnico de Infraestructura de Red</h4>
                         <ul>
-                            <li>Administré 50+ puertos en switches Cisco, implementando VLANs para 200+ usuarios</li>
-                            <li>Reduje downtime en 30% mediante monitoreo proactivo LAN/WAN</li>
-                            <li>Gestioné 100+ tickets/mes con 95% de cumplimiento de SLA</li>
+                            <li>Configuración de <strong>VLANs</strong> y <strong>trunking 802.1Q</strong> en switches Cisco (2960/3850)</li>
+                            <li>Gestión de <strong>WLC Cisco</strong> para 200+ dispositivos inalámbricos</li>
+                            <li>Monitoreo de infraestructura LAN/WAN con <strong>SNMP y Syslog</strong></li>
+                            <li>Reducción de downtime en 30% mediante implementación de <strong>Spanning Tree Protocol (RSTP)</strong></li>
                         </ul>
+                        <div class="tech-tags">
+                            <span>Cisco IOS</span><span>VLANs</span><span>WLC</span><span>SNMP</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Asistente de Sistemas</h3>
-                        <h4>SLA | 2023 – 2024</h4>
+                        <div class="timeline-header">
+                            <h3>SLA</h3>
+                            <span class="timeline-date">2023 – 2024</span>
+                        </div>
+                        <h4>Asistente de Sistemas</h4>
                         <ul>
-                            <li>Administré inventario de 500+ activos tecnológicos</li>
-                            <li>Resolví 150+ incidencias de hardware/software en niveles 1 y 2</li>
-                            <li>Estandaricé procesos con checklists operativos en 5 áreas</li>
+                            <li>Administración de inventario de 500+ activos en <strong>Active Directory</strong></li>
+                            <li>Diagnóstico y resolución de incidencias de red niveles 1 y 2</li>
+                            <li>Automatización de checklists operativos con <strong>Python</strong></li>
+                            <li>Gestión de permisos y políticas de seguridad en Windows Server</li>
                         </ul>
+                        <div class="tech-tags">
+                            <span>Active Directory</span><span>Windows Server</span><span>Python</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Desarrollador Front-end</h3>
-                        <h4>Lima Digital | 2023 (6 meses)</h4>
+                        <div class="timeline-header">
+                            <h3>Lima Digital</h3>
+                            <span class="timeline-date">2023 (6 meses)</span>
+                        </div>
+                        <h4>Desarrollador Front-end</h4>
                         <ul>
-                            <li>Desarrollé 3 sitios web optimizados para SEO (mejora de 60% en velocidad)</li>
-                            <li>Implementé diseños responsivos que aumentaron retención móvil en 35%</li>
+                            <li>Desarrollo de 3 aplicaciones web corporativas con <strong>HTML5/CSS3/JS</strong></li>
+                            <li>Implementación de <strong>diseño responsivo</strong> y optimización SEO</li>
+                            <li>Colaboración en equipo <strong>Scrum</strong> con entregas semanales</li>
                         </ul>
+                        <div class="tech-tags">
+                            <span>JavaScript</span><span>CSS3</span><span>SEO</span><span>Scrum</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,54 +213,51 @@
     <!-- Projects Section -->
     <section id="projects" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title fade-in">Proyectos Destacados</h2>
+            <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-header">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
                         <i class="fas fa-chart-line"></i>
-                        <h3>Dashboard de Red Corporativa</h3>
                     </div>
-                    <p>Sistema de monitoreo en tiempo real para switches Cisco usando SNMP y Grafana. Captura métricas de CPU, memoria y tráfico de puertos.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SNMP</span>
-                        <span class="tech-tag">Grafana</span>
+                    <h3>Dashboard de Red Corporativa</h3>
+                    <p>Sistema de monitoreo en tiempo real para switches Cisco usando <strong>SNMP</strong> para capturar métricas de CPU, memoria y tráfico de puertos. Visualización con Grafana.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>SNMP</span><span>Grafana</span><span>InfluxDB</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Código</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-header">
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
                         <i class="fas fa-ticket-alt"></i>
-                        <h3>Gestor de Tickets Interno</h3>
                     </div>
-                    <p>Aplicación web para gestionar incidencias de TI con priorización inteligente y generación de reportes automáticos.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">LocalStorage</span>
+                    <h3>Gestor de Tickets Interno</h3>
+                    <p>Aplicación web para gestión de incidencias TI con sistema de priorización automática, reportes y dashboard. Desarrollada para optimizar SLA.</p>
+                    <div class="project-stack">
+                        <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>LocalStorage</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Código</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-header">
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
                         <i class="fas fa-server"></i>
-                        <h3>Herramienta de Inventario TI</h3>
                     </div>
-                    <p>Script en Python que automatiza inventariado de equipos en red usando ping sweep y SNMP walks.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SNMP</span>
-                        <span class="tech-tag">SQLite</span>
+                    <h3>Herramienta de Inventario TI</h3>
+                    <p>Script en Python que automatiza descubrimiento de equipos en red usando <strong>ping sweep</strong> y <strong>SNMP walks</strong>. Almacena datos en SQLite con web interface.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>SNMP</span><span>SQLite</span><span>Flask</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" title="Ver Código"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Código</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
             </div>
@@ -273,27 +267,47 @@
     <!-- Certifications Section -->
     <section id="certifications" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Certificaciones</h2>
+            <h2 class="section-title">Certificaciones</h2>
             <div class="certs-grid">
-                <div class="cert-card fade-in">
-                    <i class="fas fa-certificate"></i>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <span class="cert-year">2025</span>
+                    </div>
                     <h3>Azure Infrastructure & DevOps</h3>
-                    <p>IDAT | 2025</p>
+                    <p>IDAT</p>
                 </div>
-                <div class="cert-card fade-in">
-                    <i class="fas fa-shield-alt"></i>
+                <div class="cert-card featured">
+                    <div class="cert-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="cert-year">2025</span>
+                    </div>
                     <h3>Hacking Ético</h3>
-                    <p>Fundación San Marcos | 2025</p>
+                    <p>Fundación San Marcos + INCEPERU</p>
                 </div>
-                <div class="cert-card fade-in">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL: Bases de Datos</h3>
-                    <p>Udemy | 2022</p>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fas fa-user-shield"></i>
+                        <span class="cert-year">2025</span>
+                    </div>
+                    <h3>Seguridad Informática</h3>
+                    <p>INCEPERU</p>
                 </div>
-                <div class="cert-card fade-in">
-                    <i class="fab fa-python"></i>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fab fa-python"></i>
+                        <span class="cert-year">2025</span>
+                    </div>
                     <h3>Programación Python</h3>
-                    <p>INCEPERU | 2025</p>
+                    <p>INCEPERU</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fas fa-database"></i>
+                        <span class="cert-year">2022</span>
+                    </div>
+                    <h3>SQL: Bases de Datos</h3>
+                    <p>Udemy</p>
                 </div>
             </div>
         </div>
@@ -302,22 +316,24 @@
     <!-- Contact Section -->
     <section id="contact" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title fade-in">Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <h3>¡Trabajemos juntos!</h3>
-                    <p>Estoy disponible para oportunidades en infraestructura de TI, soporte técnico o desarrollo.</p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>angelcperez17@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+51 924 449 893</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Lima, Perú - Villa María del Triunfo</span>
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Disponible para proyectos</h3>
+                    <p>Busco oportunidades en infraestructura de red, ciberseguridad o automatización TI.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>angelcperez17@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+51 924 449 893</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lima, Perú</span>
+                        </div>
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/angelcper" target="_blank"><i class="fab fa-github"></i></a>
@@ -325,24 +341,19 @@
                         <a href="https://wa.me/51924449893" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="contact-form fade-in">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Tu Nombre" required>
-                        <input type="email" placeholder="Tu Email" required>
-                        <input type="text" placeholder="Asunto" required>
-                        <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Angel Cuchillo. Built with <i class="fas fa-heart"></i> and JavaScript</p>
-        </div>
+        <p>&copy; 2025 Angel Cuchillo | Built with <i class="fas fa-code"></i> and coffee</p>
     </footer>
 
     <script src="script.js"></script>
