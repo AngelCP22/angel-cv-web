@@ -1,6 +1,6 @@
 /* IT Color Scheme */
 :root {
-    --primary: #0a192f;  /* ❌ CORREGIDO: era #oa192f (letra 'o') */
+    --primary: #0a192f;
     --secondary: #64ffda;
     --accent: #ff6b6b;
     --text: #e6f1ff;
@@ -10,7 +10,7 @@
     --card-bg: rgba(10, 25, 47, 0.85);
     --shadow: rgba(100, 255, 218, 0.1);
     --glass: rgba(10, 25, 47, 0.5);
-    --terminal: #1e1e1e;  /* ❌ CORREGIDO: era #lelele */
+    --terminal: #1e1e1e;
 }
 
 [data-theme="light"] {
@@ -67,11 +67,11 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Theme Toggle */
+/* Theme Toggle - FIXED POSITION ON MOBILE */
 #theme-toggle {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 80px; /* MOVED LEFT to avoid hamburger */
     z-index: 1001;
     background: var(--secondary);
     color: var(--primary);
@@ -83,6 +83,16 @@ body {
     font-size: 1.2rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px var(--shadow);
+}
+
+@media (max-width: 768px) {
+    #theme-toggle {
+        top: 15px;
+        right: 70px; /* Adjusted for mobile */
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 #theme-toggle:hover {
@@ -140,6 +150,7 @@ nav .container {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1002; /* HIGHER than theme button */
 }
 
 .hamburger span {
@@ -653,6 +664,7 @@ footer {
         text-align: center;
         transition: 0.3s;
         padding: 2rem 0;
+        z-index: 1003; /* HIGHER than theme button */
     }
 
     .nav-links.active {
