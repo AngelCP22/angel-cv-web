@@ -67,11 +67,11 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Theme Toggle - FIXED POSITION ON MOBILE */
+/* Theme Toggle - FIXED FOR MOBILE OVERLAP */
 #theme-toggle {
     position: fixed;
     top: 20px;
-    right: 80px; /* MOVED LEFT to avoid hamburger */
+    right: 80px;
     z-index: 1001;
     background: var(--secondary);
     color: var(--primary);
@@ -88,7 +88,7 @@ body {
 @media (max-width: 768px) {
     #theme-toggle {
         top: 15px;
-        right: 70px; /* Adjusted for mobile */
+        right: 70px;
         width: 40px;
         height: 40px;
         font-size: 1rem;
@@ -150,7 +150,7 @@ nav .container {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1002; /* HIGHER than theme button */
+    z-index: 1002;
 }
 
 .hamburger span {
@@ -664,7 +664,7 @@ footer {
         text-align: center;
         transition: 0.3s;
         padding: 2rem 0;
-        z-index: 1003; /* HIGHER than theme button */
+        z-index: 1003;
     }
 
     .nav-links.active {
